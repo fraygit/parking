@@ -151,7 +151,7 @@ namespace parkSmartly.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToAction("Index", "Account");
+                    return RedirectToAction("Index", "Dashboard");
                     return RedirectToLocal(returnUrl);
                 case SignInStatus.LockedOut:
                     return View("Lockout");
@@ -264,7 +264,6 @@ namespace parkSmartly.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            Response.Redirect(ConfigurationManager.AppSettings["AppUrl"] + "Account/Register");
             var search = Request.QueryString["search"] != null ? Request.QueryString["search"].ToString() : string.Empty;
             var register = new RegisterViewModel { SearchAddress = search};
             return View(register);

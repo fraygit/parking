@@ -170,6 +170,7 @@
     <Compile Include="Common\Helper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AccountStatementController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\FeedbackController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -530,6 +531,7 @@
     <Content Include="Views\Shared\_LayoutMaterialAdmin.cshtml" />
     <Content Include="Views\Shared\_LayoutMaterialDesignLogin.cshtml" />
     <Content Include="Views\Partial\LeftMenu.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
