@@ -22,7 +22,7 @@ namespace parkSmartly.Data.Entities.Service
 
                 var mongoClient = new MongoClient(connectionString);
 
-                var db = mongoClient.GetDatabase("parkSmartly");
+                var db = mongoClient.GetDatabase("parking");
 
                 MongoCollection = db.GetCollection<T>(typeof(T).Name.ToLower() + "s");
             }
