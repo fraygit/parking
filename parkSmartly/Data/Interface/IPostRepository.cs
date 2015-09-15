@@ -11,5 +11,7 @@ namespace parkSmartly.Data.Interface
     public interface IPostRepository : IEntityService<Space>
     {
         Task<List<Space>> GetSpacesByUser(string username);
+        Task<Space> GetSpaces(string spaceObjectId);
+        Task<bool> UpdatePhoto(string id, string path);
     }
 }

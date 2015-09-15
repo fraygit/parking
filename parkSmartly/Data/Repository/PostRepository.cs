@@ -21,6 +21,22 @@ namespace parkSmartly.Data.Repository
             return spaces;
         }
 
+        public async Task<Space> GetSpaces(string spaceObjectId)
+        {
+            var builder = Builders<Space>.Filter;
+            var filter = builder.Eq("_id", ObjectId.Parse(spaceObjectId));
+            var spaces = await this.ConnectionHandler.MongoCollection.Find(filter).FirstAsync();
+            return spaces;
+        }
+
+        public async Task<List<Space>> GetSpaces(string city, string country)
+        {
+            var builder = Builders<Space>.Filter;
+            var filter = builder.Eq("City", city);
+            var spaces = await this.ConnectionHandler.MongoCollection.Find(filter).ToListAsync();
+            return spaces;
+        }
+
         public async Task<bool> UpdatePhoto(string id, string path)
         {
             var builder = Builders<Space>.Filter;

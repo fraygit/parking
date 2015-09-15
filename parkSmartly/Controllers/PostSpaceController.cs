@@ -39,6 +39,14 @@ namespace parkSmartly.Controllers
             return View(search);
         }
 
+        [Authorize]
+        public async Task<ActionResult> ParkingLog(string spaceObjectId)
+        {
+            var postRepository = new PostRepository();
+            var space = await postRepository.GetSpaces(spaceObjectId);
+            return View(space);
+        }
+
         [HttpPost]
         [Authorize]
         public async Task<ActionResult> Photo()
@@ -93,6 +101,8 @@ namespace parkSmartly.Controllers
                 {
                     User = User.Identity.Name,
                     Address = space.Address,
+                    Country = space.Country,
+                    City = space.City,
                     latitude = space.latitude,
                     longitude = space.longitude,
                     VehicleType = space.VehicleType,

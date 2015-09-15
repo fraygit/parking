@@ -13,6 +13,8 @@ namespace parkSmartly.Data.Model
     {
         public string User { get; set; }
         public string Address { get; set; }
+        public string City { get; set; }
+        public string Country { get; set; }
         public double latitude { get; set; }
         public double longitude {get; set;}
         public string Phone { get; set; }
@@ -23,6 +25,7 @@ namespace parkSmartly.Data.Model
         public double Price { get; set; }
         public string Instructions { get; set; }
         public string PhotoPath { get; set; }
+        public List<Parking> Parking { get; set; }
         public DateTime DatePosted { get; set; }
         public DateTime lastModified { get; set; }
     }
@@ -41,5 +44,13 @@ namespace parkSmartly.Data.Model
         public bool Sat { get; set; }
         public String TimeFrom { get; set; }
         public string TimeTo { get; set; }
+    }
+
+    public class Parking
+    {
+        public string Customer { get; set; }
+        public DateTime CheckIn { get; set; }
+        public DateTime CheckOut { get; set; }
+        public double TotalCostCharged { get; set; }
     }
 }

@@ -532,6 +532,7 @@
     <Content Include="Views\Shared\_LayoutMaterialDesignLogin.cshtml" />
     <Content Include="Views\Partial\LeftMenu.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\PostSpace\ParkingLog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

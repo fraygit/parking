@@ -15,6 +15,7 @@ namespace parkSmartly.Data.Model
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string FullName { get; set; }
+        public bool IsVendor { get; set; }
         public bool IsActive { get; set; }
         public bool isFacebookUser { get; set; }
         public string Address { get; set; }
